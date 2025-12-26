@@ -1,6 +1,6 @@
 # Home Lab and Infrastructure Documentation
 
-Hi there! For a while now, I've been slowly adding to a home server project as a way to familiarize myself with linux, take greater ownership and resposibility for my data, and also, I just think it's really cool.
+**Hi there!** For a while now, I've been slowly adding to a home server project as a way to familiarize myself with linux, take greater ownership and resposibility for my data, and also, I just think it's really cool.
 
 My server's name is Rhubarb, a play-on-words that refers to the Raspberry Pi it's hosted on (rhubarb pie is also delicious), but also a bit a nod to the concept of "rhubarb forcing", a method of growing rhubarb where it's grown in a hot, dark environment that leads it to grow much faster than normal, and creates sweeter, more tender stalks. With Rhubarb (the server), I'm employing chaos engineering to acheive a similar goal: when put under high loads (stress testing), the system must lern (via automation) how to survive (stay up) and grow, leading to a much more resilient and desirable outcome (a server with built-in, automated failsafes).
 
