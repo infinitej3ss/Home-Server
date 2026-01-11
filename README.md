@@ -6,10 +6,12 @@ My server's name is Rhubarb, a play on words that refers to the Raspberry Pi it'
 
 With Rhubarb (the server), I'm employing chaos engineering to acheive a similar goal: when put under high loads (stress testing), the system must learn (via automation) how to survive (stay up) and grow, leading to a much more resilient and desirable outcome (a server with built-in, automated failsafes).
 
+
 <figure>
 	<img src="diagrams/my_network.png">
 	<figcaption> Rhubarb network infrastructure diagram </figcaption>
 </figure>
+
 
 ### About This Repo
 
