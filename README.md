@@ -8,14 +8,13 @@ My server's name is Rhubarb, a play on words that refers to the Raspberry Pi it'
 
 ### About This Repo
 
-I've done my best to document not only the setup and configuration of my server, but also the things I've learned along the way (in changelog.md) and reasoning my design decisions . I want anyone who is vaguely interested in self-hosting to be able to look at this guide, see the cool things that self-hosting can enable, and have a good starting point for making their own thing. For me, it's also very helpful for keeping things intentional and organized, as I won't add a feature that isn't documented and justified.
+This repo has two main components:
 
-There are four main components to this repo:
-1. The README (this part!), describing a high-level overview of the project
-2. The Change Log (ChangeLog.md), describing discrete chunks of progress I've made on the server, my biggest challenges, what I learned, and what I plan to do next.
-3. The Runbook (Runbook.md), describing how to perform the initial server setup, as well as how to perform routine maintenance tasks (configuring nginx files, docker images, etc.)
-4. Scripts and configs. These are copies of crucial files from the server with sensetive information redacted.
+**`/rhubarb`**
+- Configuration files that are crucial for the operation of the server (Docker, WireGuard, CoreDNS)
+- Automation scripts that are responsible for detecting and recovering from fail states
 
-Next, I'm gonna go over generally what I've built, what it does, and how the pieces all fit together.
-### Structure Overview
+**`/herbicide`**
+- Files for Terraform and Ansible configuration
+- Chaos testing scripts that are run from Ansible
 
