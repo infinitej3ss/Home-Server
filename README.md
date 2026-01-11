@@ -6,15 +6,24 @@ My server's name is Rhubarb, a play on words that refers to the Raspberry Pi it'
 
 ![A diagram of my home server, showing my Raspberry connected to the Gateway with Ethernet, and exposing 5 services publicly. There's also a Wireguard port, which exposes 4 other services to devices in the VPN network](photos/my_network.png)
 
+<figure>
+	<img src="photos/my_network.png">
+	<figcaption> Rhubarb network infrastructure diagram </figcaption>
+</figure>
+
 ### About This Repo
 
-This repo has two main components:
+This repo has three main parts:
 
-**`/rhubarb`**
-- Configuration files that are crucial for the operation of the server (Docker, WireGuard, CoreDNS)
+#### `/rhubarb`
+- Configuration files that are crucial for the operation of the server (Docker, WireGuard, CoreDNS, Samba, Nginx)
 - Automation scripts that are responsible for detecting and recovering from fail states
 
-**`/herbicide`**
+#### `/herbicide`
 - Files for Terraform and Ansible configuration
 - Chaos testing scripts that are run from Ansible
+- Configuration files for Grafana diagnostic dashboards
 
+#### `/diagrams`
+- Drawings of various aspects of the server with accompanying descriptions
+- Includes diagrams for architecture overview (displayed above), Herbicide command flow, WireGuard protocol overview, and how logs/metrics are collected and displayed with Alloy, Loki, Prometheus, and Grafana.
