@@ -1,0 +1,12 @@
+home {
+    file /etc/coredns/home.db
+    log
+    errors
+}
+
+. {
+    forward . 8.8.8.8 1.1.1.1
+    cache 30
+    log
+    errors
+}

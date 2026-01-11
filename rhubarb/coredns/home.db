@@ -1,0 +1,14 @@
+$ORIGIN home.
+@	3600 IN SOA sns.dns.icann.org. noc.dns.icann.org. (
+				2023122301 ; serial
+				7200       ; refresh
+				3600       ; retry
+				1209600    ; expire
+				3600       ; minimum
+				)
+
+	3600 IN NS  ns1.home.
+ns1	3600 IN A   10.5.2.1  ; Assuming this is the server's own IP
+jellyfin 3600 IN A 10.5.2.1
+navidrome 3600 IN A 10.5.2.1
+dash 3600 IN A 10.5.2.1

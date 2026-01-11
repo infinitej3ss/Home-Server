@@ -1,0 +1,33 @@
+server {
+
+	root /var/www/inhalf.house;
+	index index.html;
+
+	server_name = inhalf.house www.inhalf.house;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+    listen 443 ssl; # managed by Certbot
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/inhalf.house/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/inhalf.house/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = inhalf.house) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+	listen 80;
+	listen [::]:80;
+
+	server_name = inhalf.house www.inhalf.house;
+    return 404; # managed by Certbot
+
+
+}

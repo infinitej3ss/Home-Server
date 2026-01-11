@@ -1,0 +1,20 @@
+server {
+    listen 10.5.2.1:80;
+    server_name jellyfin.home; # Now that it works, we can use the real name
+
+    location / {
+        proxy_pass http://127.0.0.1:5001;
+        
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        
+        # WebSockets
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+
+        # Buffering: Set this to 'off' for video streaming stability
+        proxy_buffering off;
+    }
+}
